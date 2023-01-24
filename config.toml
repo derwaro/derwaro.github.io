@@ -1,0 +1,48 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'derwaro'
+theme = "m10c"
+
+
+
+[params]
+  author = 'derwaro'
+  description = "discoveries along the way"
+  avatar = 'moangoa.jpeg'
+  menu_item_separator = '|'
+  favicon = ''
+  [[params.social]]
+    icon = "github"
+    name = "My Github"
+    url = "https://github.com/derwaro"
+  [[params.social]]
+    icon = "mail"
+    name = "Mail"
+    url = ""
+
+[menu]
+[[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    identifier = "about me"
+    name = "About Me"
+    url = "/aboutme/"
+    weight = 2
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+  
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"

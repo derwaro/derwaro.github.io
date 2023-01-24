@@ -1,0 +1,23 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Christian Hrdina-Cortes'
+theme = "m10c"
+
+
+
+[Params]
+  author = 'chc'
+  description = ''
+  avatar = ''
+  menu_item_separator = '|'
+  favicon = ''
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+
+[params.social]
+  icon = "github"
+  name = "My Github"
+  url = "https://github.com/derwaro"
