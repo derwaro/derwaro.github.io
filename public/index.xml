@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>derwaro</title>
+    <link>https://derwaro.github.io/</link>
+    <description>Recent content on derwaro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://derwaro.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me, moangoa</title>
+      <link>https://derwaro.github.io/aboutme/</link>
+      <pubDate>Mon, 06 Jun 2022 11:00:17 +0200</pubDate>
+      
+      <guid>https://derwaro.github.io/aboutme/</guid>
+      <description>Servus, Hola, Hello My name is Christian Hrdina. I&amp;rsquo;m a studied cultural and social anthropologist. Since my studies I worked helping migrants in Austria. In my free time I work on my homenetwork and reading up on new technological developments in informational technologies. Lately I started programming in Python, focusing on Flask. Currently I&amp;rsquo;m in the process of creating an open source booking tool, which is already in used in my workplace, but needs some adaptions to be usably outside of this specific workflow.</description>
+    </item>
+    
+  </channel>
+</rss>
