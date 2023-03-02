@@ -1,6 +1,7 @@
 --- 
 title: "Don't forget the errors"
 date: 2022-06-02T23:19:25+02:00 
+lastmod: 
 tags : ["python", "flask", "wtforms", "flask-bootstrap", "bootstrap"] 
 draft: true
 ---

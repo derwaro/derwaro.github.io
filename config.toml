@@ -2,6 +2,7 @@ baseURL = 'https://derwaro.github.io/'
 languageCode = 'en-us'
 title = 'derwaro'
 theme = "m10c"
+enableGitInfo = true
 
 
 
@@ -21,6 +22,11 @@ theme = "m10c"
     url = ""
   customCSS = ["css/custom.css"]
 
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
 
 [menu]
 [[menu.main]]
