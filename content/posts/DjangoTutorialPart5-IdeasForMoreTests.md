@@ -1,6 +1,7 @@
 ---
 title: "Django Tutorial Part5 - Ideas For More Tests - Check for Choice"
 date: 2023-02-10T12:23:17-06:00
+lastmod: 2023-02-28T:21:07:00-06:00
 draft: false
 tags: ["python", "django"]
 ---
@@ -8,13 +9,13 @@ tags: ["python", "django"]
 I'm going through the official [Django Tutorial](https://docs.djangoproject.com/en/4.1/intro/tutorial01/) and right now I'm at [Part 5](https://docs.djangoproject.com/en/4.1/intro/tutorial05/), doing Tests.
 I tried to implement all the suggestions [further down](https://docs.djangoproject.com/en/4.1/intro/tutorial05/#ideas-for-more-tests):
 
-- update the ResultsView to only show past Questions and exlude unpublished/future ones
-- check for Questions without Choices and exclude them
-- logged-in admin users should see unpublished Questions
+- [update the ResultsView to only show past Questions and exlude unpublished/future ones](#first)
+- [check for Questions without Choices and exclude them](#second)
+- [logged-in admin users should see unpublished Questions](#third)
 
 So let's get going!
 
-## Update the ResultsView to only show past Questions and exlude unpublished/future ones
+## Update the ResultsView to only show past Questions and exlude unpublished/future ones {#first}
 
 
 The first suggestion is merely a repetion of what was already covered in the tutorial for the `DetailView` adapted to the `ResultView`.
@@ -61,7 +62,9 @@ class ResultsView(generic.DetailView):
         )  # excludes future questions
 ```
 
-## Check for Questions without Choices and exclude them
+**Done!**
+
+## Check for Questions without Choices and exclude them {#second}
 
 This one is a bit trickier, since we have to modify the `create_question` function, which was added in the tutorial:
 ```python
@@ -211,8 +214,104 @@ class QuestionIndexViewTests(TestCase):
 (...)
 ```
 
-**Mission accomplished!**
+**Done!**
 
-## Logged-in admin users should see unpublished Questions
+## Logged-in admin users should see unpublished Questions {#third}
 
-*I'm still working on that one, since I have to many ideas how to represent the unpublished questions for an admin*
+the instructions are not completly clear about what "unpublished" questions are. I assumed it meant questions with a `pub_date` in the future (another variation would be that "unpublished" additionally includes Questions without Choices, as in the former suggested tests).
+
+To make this happen, we first have to adapt our `IndexView` in `views.py`. I included a simple check for `superuser` or not. and based on this check create the corresponding `return` object.
+
+```python
+(...)
+
+class IndexView(generic.ListView):
+    template_name = "polls/index.html"
+    context_object_name = "latest_question_list"
+
+    def get_queryset(self):
+
+        if (
+            self.request.user.is_superuser # this checks if the currently logged in user is a superuser. Important to do it via `**self.**request` as only `request` can not be accessed in class based views.
+        ):  # request in class based views is accessible via `self.request`` instead of `request`
+            return Question.objects.exclude(choice__isnull=True).order_by("-pub_date")[
+                :5
+            ]  # returns published and unpublished questions for superusers
+
+        else:  # returns only published Questions, as user is normal user or not logged in.
+            return (
+                Question.objects.exclude(choice__isnull=True)
+                .filter(pub_date__lte=timezone.now())
+                .order_by("-pub_date")[:5]
+            )
+
+(...)
+```
+
+Since this is mainly about writing tests, we also have to add some tests to our `tests.py`. In the style of `create_question()` i defined a `create_user()` function and used that function to create two separate tests for the `QuestionIndexViewTests` TestCases.
+
+Right after the existing `create_question()` function I define the following function `create_user()`:
+
+```python
+(...)
+
+def create_user(username, is_superuser=False, password=None):
+    """create a user with given username and set superuser to True or False"""
+    if is_superuser == False:
+        user = User.objects.create_user(username)
+    elif is_superuser == True:
+        user = User.objects.create_superuser(username, password=password)
+    user.save()
+
+    return user
+
+(...)
+```
+
+Take note of `password=None`: I initially created the function without this argument, which didn't work out, but also didn't give me an error message, which explained why the test failed. The reason is that a superuser absolutely must have a password set. So if we can't pass the `password` argument the user is **not** created and no error thrown at us! This obviously is in the Django docs:  `create_superuser()` must receive a `password` to work correctly.
+Another thing that cost me too much time debugging: I forgot to `return` the `user` object created. Didn't work, just return it, please.
+
+Summing up: We can now call this function with just a username and it will return us a normal user. If we set `is_superuser` to `True` **and** pass some `password` (e.g. "supersecurepassword") to it, it will return us dutifully a superuser!
+
+Now, let's put it to work and test our `IndexView` with the following addiotional tests:
+
+```python {hl_lines=[9]}
+(...)
+class QuestionIndexViewTests(TestCase):
+    (...)
+
+    def test_question_visibility_for_superuser(self):
+        """unpublished questions are only visible to logged in superusers. For normal users unpublished questions will not be shown"""
+        self.client = Client()
+        self.user = create_user("testAdmin", is_superuser=True, password="password")
+        self.client.force_login(self.user) 
+
+        published_question = create_question(question_text="published Q", days=-1)
+
+        unpublished_question = create_question(question_text="unpublished Q", days=2)
+
+        response = self.client.get(reverse("polls:index"))
+        self.assertQuerysetEqual(
+            response.context["latest_question_list"],
+            [unpublished_question, published_question],
+        )
+
+    def test_question_visibility_for_user(self):
+        """unpublished questions are not visible to normal users."""
+        create_user("testUser")
+        published_question = create_question(question_text="published Q", days=-1)
+
+        unpublished_question = create_question(question_text="unpublished Q", days=2)
+
+        response = self.client.get(reverse("polls:index"))
+        self.assertQuerysetEqual(
+            response.context["latest_question_list"],
+            [published_question],
+        )
+
+(...)
+```
+
+ad `self.client.force_login(self.user)`: Not sure if I absolutely necessarily need to force the login of the created superuser, but I did it just to be sure, after lots of debugging, which actually was caused by the missing `password` argument I described a bit up. 
+
+**Done!**

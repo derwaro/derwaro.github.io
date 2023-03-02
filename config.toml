@@ -19,6 +19,8 @@ theme = "m10c"
     icon = "mail"
     name = "Mail"
     url = ""
+  customCSS = ["css/custom.css"]
+
 
 [menu]
 [[menu.main]]
@@ -46,3 +48,10 @@ theme = "m10c"
 [taxonomies]
    tag = "tags"
    category = "categories"
+
+[markup]
+    [markup.highlight]
+      lineNos = true
+      lineNoStart = 1
+      lineNumbersInTable = false
+      codeFences = true
