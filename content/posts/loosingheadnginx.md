@@ -1,7 +1,7 @@
 ---
 title: "Loosing head over nginx"
 date: 2022-07-08T12:12:20+02:00
-lastmod: 
+lastmod: :gitmod
 draft: false
 tags: ["python", "flask", "nginx", "gunicorn", "jinja2"]
 ---

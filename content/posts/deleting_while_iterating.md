@@ -1,7 +1,7 @@
 ---
 title: "Deleting while iterating"
 date: 2023-02-22T22:48:59-06:00
-lastmod: 
+lastmod: :gitmod
 draft: false
 tags: ["python", "shortpost"]
 ---
