@@ -1,7 +1,7 @@
 ---
 title: "Django Tutorial Part5 - Ideas For More Tests - Check for Choice"
 date: 2023-02-10T12:23:17-06:00
-lastmod: ":git"
+lastmod: 
 draft: false
 tags: ["python", "django"]
 ---
