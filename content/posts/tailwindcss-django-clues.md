@@ -2,7 +2,7 @@
 title: "TailwindCSS Django Clues"
 date: 2023-03-23T22:44:09-06:00
 lastmod: 
-draft: true
+draft: false
 tags: ["Django", "TailwindCSS"]
 ---
 
