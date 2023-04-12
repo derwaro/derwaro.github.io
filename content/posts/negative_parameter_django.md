@@ -4,6 +4,7 @@ date: 2023-03-07T14:28:08-06:00
 lastmod: 
 draft: false
 tags: ["django", "python"]
+categories: ["tech"]
 ---
 
 Django only accepts positive integers as url parameters.

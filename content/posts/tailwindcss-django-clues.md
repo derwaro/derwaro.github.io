@@ -4,6 +4,7 @@ date: 2023-03-23T22:44:09-06:00
 lastmod: 
 draft: false
 tags: ["Django", "TailwindCSS"]
+categories: ["tech"]
 ---
 
 These are some clues to correctly set up the TailwindCSS NPM method with Django.

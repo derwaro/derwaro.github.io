@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="content">
+    <h1 class="title">Projects</h1>
+    <ul>
+    {{ range .Data.Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="project-thumbnail">
+          <h2>{{ .Title }}</h2>
+        </a>
+      </li>
+    {{ end }}
+    </ul>
+  </div>
+{{ end }}

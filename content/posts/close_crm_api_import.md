@@ -4,6 +4,7 @@ date: 2023-03-02T16:48:29-06:00
 lastmod: 
 draft: false
 tags: ["python", "api"]
+categories: ["tech"]
 ---
 
 I recently was tasked to write a custom python script importing some given `.csv` file into [Close.com](https://www.close.com) via their API. It was the first time I had to use their API, so there was a lot of trial and error involved. Additionally the input data had to be serverly cleaned up to be compatible with the API requirements.

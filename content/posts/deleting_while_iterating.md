@@ -4,6 +4,7 @@ date: 2023-02-22T22:48:59-06:00
 lastmod: 
 draft: false
 tags: ["python", "shortpost"]
+categories: ["tech"]
 ---
 Just found out that you can't `del` keys from a dict while iterating through it.
 

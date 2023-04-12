@@ -4,5 +4,6 @@ date: {{ .Date }}
 lastmod: 
 draft: true
 tags: ["",]
+categories: [""]
 ---
 

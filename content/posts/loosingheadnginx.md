@@ -4,6 +4,7 @@ date: 2022-07-08T12:12:20+02:00
 lastmod: 
 draft: false
 tags: ["python", "flask", "nginx", "gunicorn", "jinja2"]
+categories: ["tech"]
 ---
 # Loosing Header over nginx
 

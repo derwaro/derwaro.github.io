@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <div class="content">
+    <h1 class="title">{{ .Title }}</h1>
+    <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="project-image">
+    {{ .Content }}
+  </div>
+{{ end }}

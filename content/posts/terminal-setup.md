@@ -4,6 +4,7 @@ date: 2023-03-22T23:26:04-06:00
 lastmod: 
 draft: true
 tags: ["linux", "howto"]
+categories: ["tech"]
 ---
 
 In this post I will shortly describe my current terminal setup.

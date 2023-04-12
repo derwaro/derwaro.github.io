@@ -4,6 +4,7 @@ date: 2023-02-10T12:23:17-06:00
 lastmod: 
 draft: false
 tags: ["python", "django"]
+categories: ["tech"]
 ---
 
 I'm going through the official [Django Tutorial](https://docs.djangoproject.com/en/4.1/intro/tutorial01/) and right now I'm at [Part 5](https://docs.djangoproject.com/en/4.1/intro/tutorial05/), doing Tests.
