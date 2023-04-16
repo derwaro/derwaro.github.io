@@ -12,3 +12,5 @@ Lately I used my wifes iPad for writing stuff and found myself in the trouble of
 
 Since I normally only used it for passive consuming I never had the urge to find out. Until now. So I set out for searching the Internet for a solution, but never found a satisfying solution. To make things short, I recorded this little video to showcase how to switch between the set layout: press and hold the little world symbol on the virtual keyboard and then slide up to select the desired/needed layout.
 ![Switch Layout on the iPad Keyboard](/img/ipadkeyboardswitcher.gif#center)
+
+*Edit: I since found the right page on [Apple Support](https://support.apple.com/guide/ipad/add-or-change-keyboards-ipad1aa5a19a/ipados). Searching stuff really became a hit and miss thing. 
