@@ -129,7 +129,7 @@ class FillPapelitoForm(forms.Form):
 
 Here the validator does what is in the code and what I want it to check (that if end is smaller than start, there should be an error) and *`raise`s* the error (instead of *`return`ing* it).
 
-*note:* I submitted an edit to the Stack Overflow answer, which is at submission of this post still in review. 
+*note:* I submitted an [edit](https://stackoverflow.com/a/44749336/14009697) to the Stack Overflow answer, which is at submission of this post still in review. 
 
 
 
