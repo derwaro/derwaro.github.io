@@ -7,7 +7,7 @@ tags: ["django", "flask"]
 categories: ["tech"]
 ---
 I could not find the the correct solution or path to custom form validation in Django, so I will quickly write up my findings (for me to check later on and maybe they help you too).
-Keep on reading↡ if you want to follow my path of discovery, jump to the [working answer](#workinganswer) or to the [working snippet](#workinsnippet) right away.
+Keep on reading↡ if you want to follow my path of discovery, jump to the [working answer](#workinganswer) ~~or to the [working snippet](#workingsnippet) right away~~ EDIT: or to even better [improved snippet](#improvedsnippet).
 
 # flask-wtforms-style
 Initially i wanted to impose the validation flask-wtforms-style, since this is how i learned form validation first. Turns out i wasn't quite able to do that. The idea was to put all my validators in a `validators.py` file in my app. Import the used (would say all) validators into my `forms.py` and impose them onto form fields where needed. **This did not work for me!**
@@ -131,9 +131,63 @@ Here the validator does what is in the code and what I want it to check (that if
 
 *note:* I submitted an [edit](https://stackoverflow.com/a/44749336/14009697) to the Stack Overflow answer, which is at submission of this post still in review. 
 
+# Edit and addition {#improvedsnippet}
+Thanks to the kind [comment](https://fosstodon.org/@LucidDan/110267537415089445) from [Dan over at fosstodon](https://fosstodon.org/@LucidDan) I further improved my snippet. It seems like my version above ran a validation before each field was successfully validated in the "basic" way (e.g. the field was checked to be not empty). That's why one should implement the validation inside of the django-provided `clean` function (make sure to not forget the call on line 21 to fetch the `cleaned_data`). The validation then is moved inside an `if` block that checks if both required values actually are present in the `cleaned_data` dictionary, that is in the variables we stored their values in (as can be seen on line 25).
+
+```python {hl_lines=[21,25]}
+from django import forms
+
+from django.core.exceptions import ValidationError
+
+
+class FillPapelitoForm(forms.Form):
+    equipment_type = forms.CharField(max_length=150, required=True)
+    time_start = forms.TimeField(required=True)
+    time_end = forms.TimeField(required=True)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        time_end = cleaned_data.get("time_end")
+        time_start = cleaned_data("time_start")
+
+        if time_start and time_end:
+            if time_end <= time_start:
+                raise ValidationError(
+                    f"Error: End Time {time_end} must be after Start time {time_start}"
+                )
+```
+
+Dan refers in his comment to this section of the official Django documentation: [cleaning and validating fields that depend on each other](https://docs.djangoproject.com/en/4.2/ref/forms/validation/#cleaning-and-validating-fields-that-depend-on-each-other)
+
+The official snippet looks like this:
+
+```python 
+from django import forms
+from django.core.exceptions import ValidationError
+
+
+class ContactForm(forms.Form):
+    # Everything as before.
+    ...
+
+    def clean(self):
+        cleaned_data = super().clean()
+        cc_myself = cleaned_data.get("cc_myself")
+        subject = cleaned_data.get("subject")
+
+        if cc_myself and subject:
+            # Only do something if both fields are valid so far.
+            if "help" not in subject:
+                raise ValidationError(
+                    "Did not send for 'help' in the subject despite " "CC'ing yourself."
+                )
+```
+
+**Sidenote:** a `.get` call needs `()` parenthesis and will not work with `[]` brackets.
 
 
 
-[^1]: cleaned_data is a dictionary-like object that stores the cleaned form data after validation. In Django, when a user submits a form, the data is automatically validated by the framework. During this process, Django checks if the data entered in the form is valid and in the correct format. If it's valid, Django stores the cleaned data in the cleaned_data dictionary.
 
+
+[^1]: cleaned_data is a dictionary-like object that stores the cleaned form data after validation. In Django, when a user submits a form, the data is automatically validated by the framework. During this process, Django checks if the data entered in the form is valid and in the correct format. If it's valid, Django stores the cleaned data in the cleaned_data dictionary.  
 The cleaned_data is passed to the view function as an argument and can be used to create or update models, generate reports or perform any other operations required. The cleaned_data dictionary is also used to re-populate the form fields in case there is any validation error, so the user doesn't have to re-enter the data again.
