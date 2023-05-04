@@ -16,4 +16,3 @@ I still remember manually typing each command or (for better of worse) manually 
 While the simple command already is of great help, there is obviously room for expansion, since it presents only one result and continuing the search calls for multiple `ctrl + r` calls.
 ## reverse-search + Atuin
 That's were [Atuin](https://github.com/ellie/atuin) steps in! It features multiple results in one search and even hotkeys to call the quickly without using the arrow keys. Furthermore it shows, when the command was last called and if it was called successfully or not.
-Superduper
