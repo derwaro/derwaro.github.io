@@ -22,6 +22,79 @@ Working as an interpreter is a classic self-dependent work in Austria, one works
 For me as a coordinator this meant to organize my team in a way that enough interpreters are available for colleagues in-house and to organize external appointments in such a manner that the most of them could be covered by our interpreters.
 
 ## In-House Organization
+The planning was (and more or less still is) done on a weekly basis. When I started out the weekly plan was done in an Excel Sheet. The Sheet resided in an `.xls` file, which contained one sheet for each week of the year. Each sheet contained 5 columns for the weekdays from Monday to Friday. Each day was split up into Morning (8-12 o'clock) and Afternoon (12-16 o'clock). Inside the section for the morning the top was deserved for the Farsi/Dari Team and the bottom for the Arabic team. Inbetween we had to fit Russian, Somali and various "smaller" languages (for example, Bangla). Where each language was located was implicit knowledge for us and more importantly for the in-house colleagues. Meaning new colleagues had to learn who speaks what languages by trial and error, asking their experienced colleagues or by consulting in a list with names and languages we sent out, when there were changes in our team.
 
-The planning was (and more or less still is) done on a weekly basis. When I started out the weekly plan was done in an Excel Sheet. The Sheet resided in an `.xls` file, which contained one sheet for each week of the year. In the file we manually copied, that is added, the next week manually and then on the basis of the current week worked out the plan for the next week. That meant we had to check who was missing in the current week due to illness or vacation and who had differing working hours in the current week. Since we deleted rows for those who were missing, we manually had to readd those rows and again enter the working hours for that person.
+In the file we manually copied, that is added, the next week manually and then on the basis of the current week worked out the plan for the next week. That meant we had to check who was missing in the current week due to illness or vacation and who had differing working hours in the current week. Since we deleted rows for those who were missing, we manually had to readd those rows and again enter the working hours for that person.
 
+Since an interpreter may be available for the whole day, but have to assist an external appointment during certain hours we added their absent times. The problem was, when there were many absent times and they didn't fit in their respective column.
+Furthermore each interpreter was available by phone (the office was split up between 3 floors) and their respective direct number was in that sheet too.
+
+As already mentioned we planned on a weekly basis, doing the biggest load of work from Thursday Afternoon until Friday Noon. At Noon we created `.pdf` files for in-house colleagues and the interpreters and sent them out via mail. Due to how the Excel was set up there was a lot of room for errors: some interpreter may have notified us or our supervisor that he/she will be missing due to personal reasons at a certain time or day of the next week. We only received this feedback after sending the plan out to the interpreter team. So then we had to replan and send out a new `.pdf` to them. Obviously we were worse of, sending out the plan to our in-house colleagues and only after receive a notification from an interpreter. Then we had to send out confusing mails to the colleagues and to the interpreter team.
+
+I mocked up a quick sketch of those plans (thanks to [tablesgenerator.com](https://www.tablesgenerator.com/markdown_tables#)):
+(be sure to horizontal scroll this beauty)
+```
+|      	| Monday    	|                         	|     	|     	| Tuesday 	|           	|     	|     	| Wednesday 	|               	|     	|     	| Thursday  	|                         	|     	|     	| Friday    	|                        	|     	|     	|
+|------	|-----------	|-------------------------	|-----	|-----	|---------	|-----------	|-----	|-----	|-----------	|---------------	|-----	|-----	|-----------	|-------------------------	|-----	|-----	|-----------	|------------------------	|-----	|-----	|
+|      	|           	| details                 	| EXT 	|     	|         	| details   	| EXT 	|     	|           	| details       	| EXT 	|     	|           	| details                 	| EXT 	|     	|           	| details                	| EXT 	|     	|
+| M    	| Jorge     	| absent 9-12             	| 123 	|     	| Kim     	| here 8-11 	| 124 	|     	| Jorge     	|               	| 123 	|     	| Sheila    	|                         	| 123 	|     	| Jorge     	|                        	| 123 	|     	|
+| O    	| Kim       	|                         	| 124 	|     	| Carter  	|           	| 126 	|     	| Kim       	|               	| 124 	|     	| Carter    	| absent 8-9              	| 126 	|     	| Kim       	| here 8-11              	| 124 	|     	|
+| R    	| Loretta   	| here 11-12              	| 125 	|     	| Max     	|           	| 125 	|     	| Loretta   	| here 8-10     	| 125 	|     	| Dave      	|                         	| 127 	|     	| Loretta   	|                        	| 125 	|     	|
+| N    	| Carter    	|                         	| 126 	|     	|         	|           	|     	|     	| Carter    	| absent 10-11  	| 126 	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+| I    	| Dave      	| absent 8-9              	| 127 	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+| N    	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+| G    	| Kyle      	|                         	| 221 	|     	| Bryan   	|           	| 222 	|     	| Kyle      	|               	| 221 	|     	| Bryan     	|                         	| 222 	|     	| Kyle      	|                        	| 221 	|     	|
+| M    	| Bryan     	| absent 8-9.30, 11.30-13 	| 222 	|     	| Herman  	|           	| 223 	|     	| Herman    	| here 11-12    	| 223 	|     	| Katherine 	| absent 8-8.30, 11.30-13 	| 224 	|     	| Bryan     	|                        	| 222 	|     	|
+| O    	| Herman    	|                         	| 223 	|     	|         	|           	|     	|     	| Katherine 	|               	| 224 	|     	| Marion    	|                         	| 225 	|     	| Herman    	| absent 8-9.30          	| 223 	|     	|
+| R    	| Katherine 	|                         	| 224 	|     	|         	|           	|     	|     	|           	|               	|     	|     	| Andre     	|                         	| 221 	|     	| Katherine 	|                        	| 224 	|     	|
+| N... 	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	| Marion    	| here 10.30-12          	| 225 	|     	|
+| ~~~~ 	| ~~~~      	| ~~~                     	| ~~~ 	| ~~~ 	| ~~~     	| ~~~       	| ~~~ 	| ~~~ 	| ~~~       	| ~~~           	| ~~~ 	| ~~~ 	| ~~~       	| ~~~                     	| ~~~ 	| ~~~ 	| ~~~       	| ~~~                    	| ~~~ 	| ~~~ 	|
+| A    	| Jorge     	|                         	| 123 	|     	| Kim     	|           	| 124 	|     	| Jorge     	|               	| 123 	|     	| Sheila    	|                         	| 123 	|     	| Jorge     	| absent 12-16           	| 123 	|     	|
+| F    	| Kim       	| absent 14-16            	| 124 	|     	| Carter  	|           	| 126 	|     	| Kim       	| here 13-15.30 	| 124 	|     	| Carter    	|                         	| 126 	|     	| Kim       	|                        	| 124 	|     	|
+| T    	| Loretta   	|                         	| 125 	|     	| Max     	|           	| 125 	|     	| Loretta   	|               	| 125 	|     	| Dave      	|                         	| 127 	|     	| Loretta   	|                        	| 125 	|     	|
+| E    	| Carter    	| here 12-15              	| 126 	|     	|         	|           	|     	|     	| Carter    	|               	| 126 	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+| R    	| Dave      	|                         	| 127 	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+| N    	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+| O    	| Kyle      	|                         	|     	|     	| Bryan   	|           	| 222 	|     	| Kyle      	|               	| 221 	|     	| Bryan     	|                         	| 222 	|     	| Kyle      	|                        	| 221 	|     	|
+| O    	| Bryan     	| absent 12-13            	|     	|     	| Herman  	|           	| 223 	|     	| Herman    	| here 15-16    	| 223 	|     	| Katherine 	|                         	| 224 	|     	| Bryan     	|                        	| 222 	|     	|
+| N    	| Herman    	|                         	|     	|     	|         	|           	|     	|     	| Katherine 	|               	| 224 	|     	| Marion    	| absent 12-13.30         	| 225 	|     	| Herman    	| absent 14-15, 15.30-16 	| 223 	|     	|
+| A    	| Katherine 	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	| Andre     	|                         	| 221 	|     	| Katherine 	|                        	| 224 	|     	|
+| ...  	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	| Marion    	|                        	| 225 	|     	|
+|      	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+|      	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+|      	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+|      	|           	|                         	|     	|     	|         	|           	|     	|     	|           	|               	|     	|     	|           	|                         	|     	|     	|           	|                        	|     	|     	|
+```
+
+This is obviously not the real thing (there is still information missing. We had color codes for the teams and each interpreter had his/her main language in brackets attached to his/her name,...), but enough to see yet another pain point: The plan is quite extensive. There are a lot of lines, a lot of columns for each line, day, interpreter. To reduce the size we removed rows where possible: If for example in a given week there were at most only 5 instead of 7 interpreters in a team, we removed two rows.
+
+### Pain Points In-House Organization
+Let's sum up possible pain points for us coordinators, the interpreters, and colleagues:
+* No direct visibility of spoken languages for each interpreter: Some interpreters spoke up to 5 different languages, but were represented with their "main" language only.
+* The file was mostly only editable by one coordinator at a time. Since moving rows or similar moved around a whole lot of stuff.
+* Correcting plans due to errors in the planning process involved sending out new `.pdf`, resulting in unnecessary inbox noise or plain ignoring from colleagues.
+* Rigid format: Using a `.pdf` limited us in our possibilities to update the plan during the week. For example: Jorge falls ill on Tuesday and will not come to work for the rest of the week. This involved in the best of the cases an e-mail to all teams explaining that he will be missing and hope that everyone sees and processes that mail. This get's even messier, when the intial heads-up from the sick interpreter is only for one day and is prolonged afterwards. Since we maybe would get away with a simple mail for one day, but would need a new `.pdf` if it affects various days. Furthermore: Keep in mind that the absences are external appointments. We should cover as many of them as possible. So appointments initially planned for the now sick interpreter would have to be covered by other interpreter, which in turn mangles up the plan even more.
+* There were occasions, when the mobile landline phones didn't work (mostly the batteries fault). We would then have to send out an e-mail notifying colleagues of a temporary substitute extension for that interpreter. 
+* External appointments that were sent late (that is after the formal deadline Thursday Afternoon in the week before the appointment), were not represented in the plan and caused confusion when an interpreter that should be available suddenly is not.
+* We had no way to be sure that everybody is fulfilling his/her workload, the hours in their contract. The table did not include exact hours and if someone as exception stayed longer or shorter we had no way to pass that information into the next week (except error prone notes or e-mails to ourselves). This resulted in some cases where interpreters had a lot of extra hours or were even missing hours.
+
+Those were the most crucial points we had to struggle with. Now to complete the picture I am going to show you how we managed external appointments.
+
+## External Appointments
+
+
+### Pain Points External Appointments
+
+## Billing
+
+### Pain Points Billing
+
+## In Search Of An Improvement
+
+## Werda
+
+### In-House Views
+
+### External Appointment Views
+
+### Interpreter Views
