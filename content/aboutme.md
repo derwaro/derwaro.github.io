@@ -11,4 +11,4 @@ In my free time I work on my homenetwork and reading up on new technological dev
 
 On these pages I will post mostly in English (I seek to improve my writing in English), German or Spanish. Posts are divided into bigger [categories](/categories) (tech, personal, ...) and [tagged](/tags) according to their content. 
 
-See my work on [github](https://www.github.com/derwaro) or contact me on [mastodon](https://fosstodon.org/@derwaro).
+See my work in my [showcase on this site](/categories/showcase) or on [github](https://www.github.com/derwaro). Feel free to contact me on [mastodon](https://fosstodon.org/@derwaro).
