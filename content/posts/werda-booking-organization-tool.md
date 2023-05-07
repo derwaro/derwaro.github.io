@@ -77,10 +77,22 @@ Let's sum up possible pain points for us coordinators, the interpreters, and col
 * There were occasions, when the mobile landline phones didn't work (mostly the batteries fault). We would then have to send out an e-mail notifying colleagues of a temporary substitute extension for that interpreter. 
 * External appointments that were sent late (that is after the formal deadline Thursday Afternoon in the week before the appointment), were not represented in the plan and caused confusion when an interpreter that should be available suddenly is not.
 * We had no way to be sure that everybody is fulfilling his/her workload, the hours in their contract. The table did not include exact hours and if someone as exception stayed longer or shorter we had no way to pass that information into the next week (except error prone notes or e-mails to ourselves). This resulted in some cases where interpreters had a lot of extra hours or were even missing hours.
+* Break times: We later had to include a column with the break time for each interpreter, since we had to make sure that there were always enough of them available for colleagues.
 
-Those were the most crucial points we had to struggle with. Now to complete the picture I am going to show you how we managed external appointments.
+Those were the most crucial points we had to struggle with. So far so good, let's get into the details for the external appointments.
 
 ## External Appointments
+When I joined the team back in 2017, the new hot way to book an interpreter for an external appointment was through a form on Google Forms. Before that bookings arrived through a form in a `.doc` file (horrible to manage. Languages were hard corded and if something changed we had to send out the new version per e-mail to our clients). Naturally Google Forms was already a big improvement for clients and coordinators.
+Appointments were copied from a linked Google Sheet to a local `.xlxs` (later `.xlxm`) file. We planed and organized the interpreters in it filtering for week, day, status, cancellation status, and team (based on languages). At the end of the week we created two separate `.pdf` files, which were sent out to the interpreters. To confirm appointments with clients we had to do two separate procedures since "clients" were split up into "internal" and "external". Internal meant offices from within our company, but not located in our building. For them we created a big `.pdf` file containing all future appointments and saved it onto a network drive accessible by all offices/buildings. External refers to all other clients (mostly other NGOs, hospitals and alike). For them we sent out individual e-mails confirmations by hand(!). The workflow for this was to filter out each client copy the appointments into an e-mail and send it, resulting in about 30 to 40 tediously created and sent e-mails.
+
+Compared to the form-in-a-doc-file the Google Form was a big improvement and generally received well by our clients. However we initially had a lot of repeating but varied questions. For example:
+* Double contact details: We asked for a contact responsible for the appointment and another contact responsible for the or holding the appointment.
+* Repetitive information: We asked internal clients for their complete billing address and cost center.
+
+Over time I analyzed which details were redundant and continuously improved the form reducing it by 1 page. To pick up those examples from above:
+* Double contact details: Since the most part of appointments was booked and held by the same person, I simply asked for the e-mail contact for the responsible (think: user e-mail or "unique" identifier) and for way to contact the person holding the appointment (usually we received at least a name a phone number through this). This normally resulted in complete contact details: e-mail, phone number, name. 
+* Repetitive information: We stopped asking internal clients for their complete billing details and instead asked them for their cost center number instead. Since we had an complete internal directory we were able to deduce the billing address from the cost center number.
+
 
 
 ### Pain Points External Appointments
