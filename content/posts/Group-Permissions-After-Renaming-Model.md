@@ -2,7 +2,7 @@
 title: "Group Permissions After Renaming Model"
 date: 2023-05-25T11:03:20-06:00
 lastmod: 
-draft: true
+draft: false
 tags: ["django", "database", "migrations"]
 categories: ["tech"]
 ---
