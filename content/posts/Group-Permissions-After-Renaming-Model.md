@@ -11,7 +11,7 @@ Django offers a really easy way to rename classes in it's `models.py` file, sinc
 
 # Rename a class in models.py
 The steps to rename a class in your `models.py` therefore are:
-1. rename all imports ect. in other files to the new class name (Tip: in vscode use `ctrl+shift+f` to search in all files in your workspace)
+1. rename all imports ect. in other files to the new class name (Tip: in vscode use {{< kbd ctrl>}} + {{<kbd shift>}} + {{<kbd f>}} on Windows and Linux or {{<kbd cmd>}} + {{<kbd shift>}} + {{<kbd f>}} on MacOS to search in all files in your workspace) 
 1. rename the class in your `models.py`
 2. run `manage.py makemigrations`
 3. answer "y" when asked if you renamed `OldClass` to `NewClass`  
