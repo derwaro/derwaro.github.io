@@ -19,7 +19,7 @@ enableGitInfo = true
   [[params.social]]
     icon = "mail"
     name = "Mail"
-    url = ""
+    url = "mailto:derwaro@proton.me"
   [[params.social]]
     icon = "send"
     name = "Mastodon"
