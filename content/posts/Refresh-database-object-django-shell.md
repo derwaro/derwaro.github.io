@@ -2,8 +2,8 @@
 title: "Refresh Database Object Django Shell"
 date: 2023-06-05T23:14:11-06:00
 lastmod: 
-draft: true
-tags: ["django", "shell", "database"]
+draft: false
+tags: ["django", "shell", "database", "python"]
 categories: ["tech"]
 ---
 
