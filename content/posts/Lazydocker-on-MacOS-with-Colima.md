@@ -2,7 +2,7 @@
 title: "Lazydocker on MacOS With Colima"
 date: 2023-07-31T20:10:46-06:00
 lastmod: 
-draft: true
+draft: false
 tags: ["macos", "docker", "colima"]
 categories: ["tech"]
 ---
