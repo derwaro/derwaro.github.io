@@ -96,17 +96,40 @@ Over time I analyzed which details were redundant and continuously improved the 
 
 
 ### Pain Points External Appointments
+Summing up, these were some of the problematic things related to external appointments for all those involved:
+* Lengthy booking form with no way to store repetitive information such as contact information or location
+* No way to directly identify a booked appointment through an id or unique identifier: when external clients called us or emailed us regarding an appointment, if was necessary to ask them or for them to provide us with a lot of information to correctly identify the correct appointment: date, hour, required language,...
+* Dependence on Google Forms and Sheets: All information was accessible for Google. Although the link to the form was public, luckily there was never any abuse, but also no way for us to make sure, that an appointment was really booked and required by a specific person, since there were no logins or similar. 
+* Error prone "import" process: Appointments were booked through a Google Form, which stored it's results in a Google Sheet. Since we relied on various filters and needed statistics and reports, we manually copied new appointments to a local Excel file for further processing.
+* No direct feedback for clients if appointment is confirmed: For internal clients, we stored a pdf overview of the upcoming appointments on a internally public network drive on a daily basis (I automated this through an Excel Macro). For external clients we manually sent out emails to each one of them on a weekly basis and if short term appointments were made we sent out special email confirming those, again manually. The general understanding was that an appointment is confirmed unless we coordinators contact the booker.
+* No same time editing: I would say our Excel file was not even that complicated (I've seen more complex ones), but still for some reason I never managed to get the same time editing working. Maybe the network was the culprit or we did something wrong, but there were always duplicated created on the personal user folder or unsaved changed and so on. This resulted effectively in us coordinators blocking each other.
+* Typos in cost center numbers/identifiers: Since every client could enter whichever cost center number he/she liked to, there often happened typos, which had to be cleaned up in the billing process.
 
 ## Billing
+We billed our clients monthly based on their actual appointments, whereas during coordination we already made sure that certain minimum times were enforced: min 1 hour duration for personal appointments, min 30 minutes for phone and videocall. From there it was necessary to clean up the data: were there no empty appointments, as in is there a interpreter assigned to each appointment? Are all cost centers correct and existing in the Excel sheet which generates the bills?
 
 ### Pain Points Billing
+* Typos in cost centers identifiers: Cost centers are identified by a 4 to 6 digit number. The first 4 digits describe the main cost center and the additional 2 digits describe a dependance or subdivision of it. However it is also possible to denominate a main cost center with 6 digits by appending two 0s to it: that way 1234 and 123400 were the same main cost center, but for Excel this was not seen as the same number
+* Clients could enter whatever cost center they liked or thought up: There was no way to validate those digits through Google Forms.
+* External clients had no official cost center number: I assigned fictional cost center numbers, in that case more client numbers, to clients external to our company. However officially they didn't know their number, although it was present on the bills. So for external clients it was necessary to enter "0000" as cost center in the Google Form and I had to substitute that with the fictional number during the clean up process. 
 
-## In Search Of An Improvement
+There were some more difficulties with billing[^1], but I have not yet implemented a complete billing process on my platform, so I won't treat them here. 
 
-## Werda
+# In Search Of An Improvement
+I spent quite some time during off hours in the coordination business searching for pre-existing solutions I could use out of the box or adapt to our necessities and requirements. Just some off the top of my head, that I still remember:
+* Microsoft Office Access - While in Highschool I learned to use it, but still it was more of a struggle than anything else. It did, if only, adapt to our in house needs, but not to our external clients. Reports were nice, but still, couldn't for the life of me, get it to serve our even most basic needs.
+* [Easy!Appointments](https://easyappointments.org/): My understanding of PHP is limited so I couldn't accommodate this tool to ours business needs. Easy!Appointments does not provide a way to let the client define the duration of the appointment, which was crucial to our needs. Furthermore it is not possible for the client to provide a location for the appointment, which, also, was absolutely necessary for our clients. 
+* Various other apps, plugins and such for frameworks or CMS: The difficulty there was that I couldn't find a service that provided everything needed: Various definable services (languages) with modalities (in-sitio, telephone, videocall), at client provided locations with client provided length. All of that with the possibility to filter, coordinate and assign those appointments and share appointments as well with clients as with interpreters.
 
-### In-House Views
+Actually the last point sums up pretty well the bare minimum requirements to a solution. I'll get to them again later on. For now, I'll conclude this part, with the revelation that every pre-existing solution would require too much customization and therefore either forks or rewrites of large parts, which mean a lot of in-depth digging into their code, that a custom solution is more than justified. 
 
-### External Appointment Views
+# Werda
 
-### Interpreter Views
+
+## In-House Views
+
+## External Appointment Views
+
+## Interpreter Views
+
+[^1]: Bills effectively were created through the merge letter functionality of Word, taking an Excel sheet as the basis/input. While more or less efficient there were many edge cases that did not fit nicely into that merge letter and if you've worked with it's conditional loops you know how strange Word behaves in that case. Furthermore, for our internal book keeping the bills file name had to match a certain pattern based on cost center numbers involved and the continous bill number. I solved that writing a bash script using less, awk, sed and pdftk. And from there the bills had to be sent one by one to the accounting system: I solved that by writing a small VBA script that took a file list created by the bash script as input and sent each email through Outlook.
