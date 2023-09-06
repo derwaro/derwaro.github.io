@@ -9,7 +9,7 @@ categories: ["tech"]
 
 Ngrok does not offer fixed url/domains in their free plan. BUT ngrok offers us an api :)
 
-I will only get into one aspect of their api to leverage it and obtain a paid feature for free through an extra request and some line of code. 
+I will only get into one aspect of their api to leverage it and obtain a paid feature for free through an extra request and some lines of code. 
 
 ## The Problem
 ### General
@@ -41,4 +41,5 @@ else:
 The only prerequisite is to start ngrok before executing this bit of code (`ngrok http {port of your development server}`)
 
 Source: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/api/#request
+
 Inspiration: https://stackoverflow.com/questions/63492743/how-to-pipe-the-result-of-ngrok-http-8000-to-another-file
