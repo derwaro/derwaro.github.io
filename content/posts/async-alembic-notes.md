@@ -1,6 +1,6 @@
 ---
 title: "Async Alembic Notes"
-date: 2023-09-27T23:16:26-06:00
+date: 2023-09-26T23:16:26-06:00
 lastmod: 
 draft: false
 tags: ["alembic", "notes", "sqlalchemy", "migrations", "python"]
