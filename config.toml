@@ -43,6 +43,12 @@ enableGitInfo = true
     name = "About Me"
     url = "/aboutme/"
     weight = 2
+[[menu.main]]
+    identifier = "currently"
+    name = "Currently"
+    url = "/currently/"
+    weight = 3
+
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
