@@ -26,4 +26,4 @@ last update: {{< param "lastmod" >}}
 
 
 
-[^1]: This section is inspired by bloggers having a `/uses` page. I once found a site that collected those and served as index. However, it seems like I lost the link to it and can only find this example on [Ru Singh's blog](https://rusingh.com/uses/) in my browsing history
+[^1]: This section is inspired by bloggers having a `/uses` page. ~~I once found a site that collected those and served as index. However, it seems like I lost the link to it and can only find this example on [Ru Singh's blog](https://rusingh.com/uses/) in my browsing history.~~ Thanks to Ru over on Fosstodon: the index for `/uses` pages can be found at: [uses.tech](https://uses.tech).
