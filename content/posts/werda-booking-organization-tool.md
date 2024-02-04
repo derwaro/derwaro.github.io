@@ -127,6 +127,8 @@ Actually the last point sums up pretty well the bare minimum requirements to a s
 
 
 ## In-House Views
+For our in-house views I first of all replicated the existing style, that is: a big clunky site that looks exactly like the exported Excel sheet looked like in it's pdf incarnation. However already here there were many solutions possible and implemented by me. First of all this view replicated the former pdf table style as I mentioned. So interpreters are grouped into the three main language groups. The view however, by means of a button, allowed to switch between this *grouped* style **and** a *detailed* view. This *detailed* view, may have been a bit of an overkill, but for those wanting to have a holistic view of the whole week in a very detailed view it offered: Each day being a column and in each column a detailed section for each and every language covered by our team. The resulting table obviously is huge, but you get *everything* from it.
+A further improvement, which applied to all views, was to make the phone numbers for the interpreters clickable. The company did not offer a way to call phones from desktops, but since work from home was very prevalent due to some world wide pandemic, many were working from home and outfitted with company mobile phones. Therefore being able to simply click-to-call the numbers was a big improvement over copying or remembering/replicating the phone numbers. Also: if for some reason an interpreter had to change their phone number, the coordinators are able to update the entries in the backend and have it propagated to all colleagues automatically. 
 
 ## External Appointment Views
 
