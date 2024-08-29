@@ -44,9 +44,9 @@ enableGitInfo = true
     url = "/aboutme/"
     weight = 2
 [[menu.main]]
-    identifier = "currently"
-    name = "Currently"
-    url = "/currently/"
+    identifier = "now"
+    name = "Now"
+    url = "/now/"
     weight = 3
 
   [[menu.main]]
