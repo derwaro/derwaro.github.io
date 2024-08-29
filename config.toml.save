@@ -1,12 +1,12 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Christian Hrdina-Cortes'
+title = 'derwaro'
 theme = "m10c"
 
 
 
 [Params]
-  author = 'chc'
+  author = 'derwaro'
   description = ''
   avatar = ''
   menu_item_separator = '|'
