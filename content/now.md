@@ -12,7 +12,7 @@ What I'm currently up to personally, professionally and everything in between.[^
 Mentions here are thought to be things I *currently* have been doing. I.e. Current not in the sense of *now*, but rather *currently* during the last days/weeks/months. Stuff like books, topics, research, sports,...[^3]
 
 # Currently...
-last update: {{< param "lastmod" >}}
+last update: {{< lastmodified >}}
 
 **reading** The Lord Of the Rings Trilogy: Around the time when the Peter Jackson movies were released I started reading the trilogy and stopped, I think, right after the first 10 pages, I just couldn't stand the, for me then, endless description of the Hobbit's world. I'm quite enjoying it now though, definitely advanced into the actual story already! Reading it in German on my Kindle.
 
