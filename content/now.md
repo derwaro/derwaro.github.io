@@ -1,5 +1,5 @@
 ---
-title: "Currently"
+title: "now"
 date: 2024-01-05T22:25:05-06:00
 lastmod: 
 draft: false
@@ -7,9 +7,9 @@ tags: ["",]
 categories: [""]
 ---
 
-What I'm currently up to personally, professionally and everything in between.[^1]
+What I'm currently up to personally, professionally and everything in between.[^1][^2]
 
-Mentions here are thought to be things I *currently* have been doing. I.e. Current not in the sense of *now*, but rather *currently* during the last days/weeks/months. Stuff like books, topics, research, sports,...
+Mentions here are thought to be things I *currently* have been doing. I.e. Current not in the sense of *now*, but rather *currently* during the last days/weeks/months. Stuff like books, topics, research, sports,...[^3]
 
 # Currently...
 last update: {{< param "lastmod" >}}
@@ -26,4 +26,8 @@ last update: {{< param "lastmod" >}}
 
 
 
-[^1]: This section is inspired by bloggers having a `/uses` page. ~~I once found a site that collected those and served as index. However, it seems like I lost the link to it and can only find this example on [Ru Singh's blog](https://rusingh.com/uses/) in my browsing history.~~ Thanks to Ru over on Fosstodon: the index for `/uses` pages can be found at: [uses.tech](https://uses.tech).
+[^1]: ~~This section is inspired by bloggers having a `/uses` page. I once found a site that collected those and served as index. However, it seems like I lost the link to it and can only find this example on [Ru Singh's blog](https://rusingh.com/uses/) in my browsing history. Thanks to Ru over on Fosstodon: the index for `/uses` pages can be found at: [uses.tech](https://uses.tech)~~.
+
+[^2]: Through sheer coincidence I found out that what I proudly baptized "currently" is actually already a thing under the heading of "now". See this aggregator for `/now` pages: https://nownownow.com/about
+
+[^3]: This pages was located at `/currently`, but relocated to `/now`. See footnotes [^1] and [^2]. 
